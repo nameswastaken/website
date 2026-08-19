@@ -1,0 +1,113 @@
+        /* stuff so that it works ig */
+        .productbrowser {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .pb-slider {
+            width: 980px;
+            height: 160px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .icon-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            position: absolute;
+            top: 30px;
+            left: 0;
+        }
+
+.icon-item {
+    width: 120px;
+    text-align: center;
+    font-size: 11px;
+    color: #000000;
+    list-style: none;
+}
+
+        .icon-img {
+            width: 100px;
+            height: 100px;
+            background: none;
+            border-radius: 12px;
+            margin: 0 auto 10px;
+            display: block;
+            border: none;
+        }
+        .icon-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        @keyframes enter-next {
+            from { transform: translate3d(1000px, 0, 0); }
+            32%  { transform: translate3d(0, 0, 0); }
+            40%  { transform: translate3d(-44px, 0, 0); }
+            44%  { transform: translate3d(0, 0, 0); }
+            48%  { transform: translate3d(19px, 0, 0); }
+            56%  { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(0, 0, 0); }
+        }
+
+        @keyframes exit-previous {
+            from { transform: translate3d(0, 0, 0); opacity: 1; }
+            to   { transform: translate3d(-1000px, 0, 0); opacity: 0; }
+        }
+
+        .animating-in a {
+            animation: enter-next 0.7s forwards;
+            display: block;
+        }
+
+        .animating-out a {
+            animation: exit-previous 0.8s forwards;
+            display: block;
+        }
+
+        a:nth-child(1) { animation-delay: 0.0s; }
+        a:nth-child(2) { animation-delay: 0.05s; }
+        a:nth-child(3) { animation-delay: 0.10s; }
+        a:nth-child(4) { animation-delay: 0.15s; }
+        a:nth-child(5) { animation-delay: 0.20s; }
+
+        .pb-pageindicator {
+            width: 100%;
+            height: 35px;
+            border-bottom: 1px solid #ebebeb;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            background: linear-gradient(to top, #dfdfdf 0%, #f2f2f2 100%);
+        }
+
+        .page-link {
+            font-size: 12px;
+            color: #7f7f7f;
+            text-decoration: none;
+            padding-top: 10px;
+            cursor: pointer;
+            transition: color 0.2s;
+            z-index: 2;
+        }
+
+        .page-link.active { color: #2b2b2b; }
+
+        .caret {
+            position: absolute;
+            bottom: -8px;
+            width: 15px;
+            height: 8px;
+            background: #fff;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+            transition: transform 0.4s var(--apple-bezier);
+            z-index: 3;
+        }

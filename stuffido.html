@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>names real</title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        :root {
+            --apple-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+@font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica Light'), url('https://cdn.jsdelivr.net/gh/nameswastaken/assets/helvetica/Helvetica-Light.woff') format('woff');
+}
+
+
+        body {
+            background-color: #fff;
+            font-family: "Helvetica Light", sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            margin: 0;
+        }
+        .hr1 {
+            width: 90%;
+            border: 1px solid #d9d9d9;
+            margin-top: 30px;
+        }
+        .maincontent {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .cards {
+            border:2px solid rgb(188, 188, 188);
+            width: 20vw;
+            height: 200px;
+            align-self: flex-end;
+            margin-top: -120px;
+            padding-left: 20px;
+        }
+        .geometrydash {
+            border:2px solid rgb(188, 188, 188);
+            width: 100%;
+            height: 320px;
+            margin-top: 20px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .geometrydash img {
+            width: 150px;
+            height: 150px;
+        }
+        .jailbreaking {
+            border:2px solid rgb(188, 188, 188);
+            width: 100%;
+            height: 330px;
+            margin-top: 20px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .jailbreaking img {
+            width: 150px;
+            height: 150px;
+        }
+        .tooltip {
+            position: absolute;
+            background: #333;
+            color: #fff;
+            font-size: 13px;
+            padding: 4px 8px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.15s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="productbrowser">
+    <div class="pb-pageindicator">
+        <a class="page-link active" onclick="switchPage(0, this)">Pages soon</a>
+        <div class="caret" id="caret"></div>
+    </div>
+
+    <div class="pb-slider" id="slider-container">
+        <ul class="icon-list animating-in" id="icon-list">
+            <a href="index.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Home.png" alt="Home">
+                    </div>
+                    Home
+                </li>
+            </a>
+            <a href="stuffido.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Tips.png" alt="Tips">
+                    </div>
+                    Stuff I do
+                </li>
+            </a>
+            <a href="blog.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Newstand.png" alt="Newsstand">
+                    </div>
+                    Blog
+                </li>
+            </a>
+            <a href="gallery.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Camera.png" alt="Camera">
+                    </div>
+                    Gallery
+                </li>
+            </a>
+            <a href="coverflow.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Compass.png" alt="Compass">
+                    </div>
+                    Soon..
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
+
+<span class="hr1"></span>
+
+<div class="maincontent">
+<h1>Stuff I do</h1>
+<p>I have a few hobbies as well they may not be interesting though I warn you</p>
+    <div id="geometrydash" class="geometrydash"><p>Geometry Dash</p>
+        <div class="geometrydash1">
+            <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/GD.svg">
+            <p>I love this game so much I have spent almost 250 hours on this game on Steam since December thats 10 straight days of JUST Geometry Dash
+            and while im not the best at it i'd say im alright, my GDDL hardest is Sirius which is rated a tier 7 demon but I still find it fun to play
+            regardless. Personally my hardest is DeCode even though its only rated a tier 5.
+            </p>
+        </div>
+    </div>
+    <div id="jailbreaking" class="jailbreaking"><p>Jailbreaking</p>
+        <div class="geometrydash1">
+            <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Settings.png">
+            <p>If you couldn't tell already im a nerd who likes to mess with stuff and yeah im into jailbreaking. I have a jailbroken iPad 4 and iPad mini 1
+                to toy with, I downgraded my mini 1 to iOS 6 I just kept iOS 10 on my iPad 4 because I still find myself using it here and there and it'd be
+                pointless downgrading it LOL. I . have my own repo where I put small tweaks I make at nameswastaken.github.io/repo (ONLY ARMv7 support no ARM64).
+                I used to own an iPhone SE on iOS 15 but I broke it so.. yeah.
+            </p>
+        </div>
+    </div>
+
+
+<script src="tooltip.js"></script>
+<script src="disc.js"></script>
+<script>
+    function switchPage(index, btn) {
+        const list = document.getElementById('icon-list');
+        const caret = document.getElementById('caret');
+        
+        list.className = 'icon-list animating-out';
+        
+        const offset = (index * 75) - 75; 
+        caret.style.transform = `translateX(${offset}px)`;
+
+        document.querySelectorAll('.page-link').forEach(l => l.classList.remove('active'));
+        btn.classList.add('active');
+
+        setTimeout(() => {
+            list.className = 'icon-list';
+            void list.offsetWidth; 
+            list.className = 'icon-list animating-in';
+        }, 800); // set to ig change the thing I DONT KNOW BRO THE TIEME OUT
+    }
+</script>
+
+</body>
+</html>

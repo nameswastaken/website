@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>names real - Blog</title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        :root {
+            --apple-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+@font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica Light'), url('https://cdn.jsdelivr.net/gh/nameswastaken/assets/helvetica/Helvetica-Light.woff') format('woff');
+}
+
+
+        body {
+            background-color: #fff;
+            font-family: "Helvetica Light", sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            margin: 0;
+        }
+        .hr1 {
+            width: 90%;
+            border: 1px solid #d9d9d9;
+            margin-top: 30px;
+        }
+        .maincontent {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .cards {
+            border:2px solid rgb(188, 188, 188);
+            width: 20vw;
+            height: 200px;
+            align-self: flex-end;
+            margin-top: -120px;
+            padding-left: 20px;
+        }
+        .object {
+            border:2px solid rgb(188, 188, 188);
+            width: 45%;
+            margin-top: 20px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .object img {
+            width: 150px;
+            height: 150px;
+        }
+        .tooltip {
+            position: absolute;
+            background: #333;
+            color: #fff;
+            font-size: 13px;
+            padding: 4px 8px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.15s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="productbrowser">
+    <div class="pb-pageindicator">
+        <a class="page-link active" onclick="switchPage(0, this)">Pages soon</a>
+        <div class="caret" id="caret"></div>
+    </div>
+
+    <div class="pb-slider" id="slider-container">
+        <ul class="icon-list animating-in" id="icon-list">
+            <a href="index.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Home.png" alt="Home">
+                    </div>
+                    Home
+                </li>
+            </a>
+            <a href="stuffido.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Tips.png" alt="Tips">
+                    </div>
+                    Stuff I do
+                </li>
+            </a>
+            <a href="blog.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Newstand.png" alt="Newsstand">
+                    </div>
+                    Blog
+                </li>
+            </a>
+            <a href="gallery.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Camera.png" alt="Camera">
+                    </div>
+                    Gallery
+                </li>
+            </a>
+            <a href="coverflow.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Compass.png" alt="Compass">
+                    </div>
+                    Soon..
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
+
+<span class="hr1"></span>
+
+<div class="maincontent">
+<h1>My Blog!!</h1>
+<p>Won't post very often here but you know I find it nice to have :)</p>
+<a href="blogs/post1.html">
+    <div id="object" class="object"><h4>My thoughts on school devices and it's horrendous flaws</h4>
+        <div class="">
+            <p>
+                Absolute mess that we have somehow gotten used to?? I don't know dude, just read it I spent time on it :p
+            </p> 	
+        </div>
+    </div>
+</a>
+
+
+<script src="tooltip.js"></script>
+<script src="disc.js"></script>
+<script>
+    function switchPage(index, btn) {
+        const list = document.getElementById('icon-list');
+        const caret = document.getElementById('caret');
+        
+        list.className = 'icon-list animating-out';
+        
+        const offset = (index * 75) - 75; 
+        caret.style.transform = `translateX(${offset}px)`;
+
+        document.querySelectorAll('.page-link').forEach(l => l.classList.remove('active'));
+        btn.classList.add('active');
+
+        setTimeout(() => {
+            list.className = 'icon-list';
+            void list.offsetWidth; 
+            list.className = 'icon-list animating-in';
+        }, 800); // set to ig change the thing I DONT KNOW BRO THE TIEME OUT
+    }
+</script>
+
+</body>
+</html>
