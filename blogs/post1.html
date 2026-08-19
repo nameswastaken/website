@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>names real - Blog</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <style>
+        :root {
+            --apple-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+@font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica Light'), url('https://cdn.jsdelivr.net/gh/nameswastaken/assets/helvetica/Helvetica-Light.woff') format('woff');
+}
+
+
+        body {
+            background-color: #fff;
+            font-family: "Helvetica Light", sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            margin: 0;
+        }
+	p, ul, li {
+	    font-family: Arial;
+	}
+        .hr1 {
+            width: 90%;
+            border: 1px solid #d9d9d9;
+            margin-top: 30px;
+        }
+        .maincontent {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .cards {
+            border:2px solid rgb(188, 188, 188);
+            width: 20vw;
+            height: 200px;
+            align-self: flex-end;
+            margin-top: -120px;
+            padding-left: 20px;
+        }
+        .object {
+            border:2px solid rgb(188, 188, 188);
+            width: 45%;
+            margin-top: 20px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .object img {
+            width: 150px;
+            height: 150px;
+        }
+        .tooltip {
+            position: absolute;
+            background: #333;
+            color: #fff;
+            font-size: 13px;
+            padding: 4px 8px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.15s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="productbrowser">
+    <div class="pb-pageindicator">
+        <a class="page-link active" onclick="switchPage(0, this)">Pages soon</a>
+        <div class="caret" id="caret"></div>
+    </div>
+
+    <div class="pb-slider" id="slider-container">
+        <ul class="icon-list animating-in" id="icon-list">
+            <a href="index.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Home.png" alt="Home">
+                    </div>
+                    Home
+                </li>
+            </a>
+            <a href="stuffido.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Tips.png" alt="Tips">
+                    </div>
+                    Stuff I do
+                </li>
+            </a>
+            <a href="blog.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Newstand.png" alt="Newsstand">
+                    </div>
+                    Blog
+                </li>
+            </a>
+            <a href="gallery.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Camera.png" alt="Camera">
+                    </div>
+                    Gallery
+                </li>
+            </a>
+            <a href="coverflow.html">
+                <li class="icon-item">
+                    <div class="icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/nameswastaken/assets/thxeatos/Compass.png" alt="Compass">
+                    </div>
+                    Soon..
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
+
+<span class="hr1"></span>
+
+<div class="maincontent">
+<h1>My thoughts on school devices and it's horrendous flaws</h1>
+<p>
+Oh boy will I have some things to say about this! First off, I want to say I am NOT against all filters or surveillance on school devices. But here's my problem with it and an example directly from my own school, OVERBEARING surveillance that I personally believe crosses way too many comfortable boundaries for me to even remotely find acceptable, this will be a bit of a long post but whatever it's fine you'll probably read it. Now, let me just explain what I have to deal with as a high schooler BY THE WAY on my school-provided Chromebook we are required to use.
+</p>
+<ul>
+	<li>I cannot access YouTube</li>
+	<li>A standard tab limit of 10 that decreases to 5, 3, 1, or even ZERO (bricked) depending on what i'm doing on it (i'll get into that later)
+	<li>On top of that I actually cannot access MOST websites on it</li>
+	<li>And I cannot do what I want with it after hours (again, get into that later)
+</ul>
+<p>As you probably have noticed, these are VERY restrictive regulations for a laptop meant for people doing up to community college work. It's not a very fun time using them and is highly counterintuitive for what it's trying to do; STOP distractions! of course! What solves a distraction more than punishing everyone else for someone else's wrongdoing and then doing everything in your power to stop people from doing actual real tasks! Oh but here's the funny thing, I can STILL play games on my Chromebook without any issue. Not one restriction or barrier in my way. But I cannot do most my work becuase they require YouTube videos to watch that I can't see until I get home on my real laptop to watch them. Again, super overbearing and counterintuitive for a device meant to apparently drive the future of students.</p>
+<p>Now onto my next topic, in which is the tab limiting! See, Lightspeed (our filtering and surveillance software) has a feature to limit the amount of tabs a student can have open. By default, this feature is off, and when on, it's set to 50. Ours is set to a grand total of TEN. 10. But that's usually not even the limit anyways. See, after hours or during school, if I do anything that is unproductive even if it follows the school acceptable use policy, someone at admin (likely) gets notified about it through Lightspeed and without warning or any proper rhyme or reason will limit my tabs down to 5, 3, usually 1, or sometimes even 0, making it impossible for me to even do ANYTHING on the computer. Again, notice how I said after hours? They do this OUT of school, which feels VERY wrong but they can legally do this. I don't know what the moral stance on this is though for most people, I believe that regardless of whether its school property or not, a school should not be monitoring and watching students after hours to restrict their usage of their device. I should mention that I live in an area where poverty is high, meaning for most people, this Chromebook is their only means of accessing the internet with a computer. I would like to mention my sister, who last year before graduating would have to frequently borrow my laptop to use for schoolwork because she not only could not access her work on the laptop (Outlook was blocked) but it was also so SLOW at the time making it just unreasonable to work with. That is not how it should be. A 1:1 technology device meant for students should not need to be entirely bypassed using outside technology to do schoolwork, and that is a MAJOR, MAJOR flaw.</p>
+<p>"Oh but what about the Acceptable Use Policy you mentioned earlier?" Haha! Great Question! Yeah, the two ones they "maintain" haven't been updated since 2014 and 2017 respectively. I am not joking. This also means parents lack the transparency they should have about what the school has access to on school devices as these documents were made in a time where we only had a basic web filter that complied with CIPA laws (how it SHOULD be by the way) with some monitoring software. So much for a parent's bill of rights, am I right? Anyways, just to be sure, I read through the entire paper, both of them, to assure myself that I and my parents had not granted the school the right to do this. Sure enough, there was nowhere in either paper that said the school had the right (or permission) to monitor students granually after-hours and to restrict device usage without reason. Sure, this may be covered under some unambigious rule they said to just cover themselves legally, but the closest I could find was "Students have no right to privacy when using school devices".</p>
+<p>
+Also, you guys wanna hear something funny? We asked our principal (which I am aware is not at full fault for these regulations, the district is) why YouTube is blocked. She replied by saying "why would you need YouTube". Ma'am, you ever taken a class in the 21st century? YouTube is a REQUIREMENT these days for a class. I would love to hear the district's reasoning behind the rest of this behavior, because there really is no excuse for it. They have failed to do the very thing they were tasked to do, to prevent distractions, and instead have only promoted them as they are the only thing you can do on them. Another thing, one of my friend's has already discovered a way to just bypass all the Lightspeed filters by abusing an SSO prompt on the laptop to get to Google. If my district or any district is reading this, you guys have to know that kids are not stupid. They will always find a way to get around some blantantly stupid restriction if they have the means to, no matter what it takes. The only solution is to LOWER the restrictions and teach them to do the right thing on the computer they were provided to encourage them to do their work more instead of taking notes out of George Orwell's 1984 in order to regulate everyone when you treat them as data points on a computer monitor instead of individual humans. Here's another thing to note! Constantly watching children up to when they're 18, messes them up mentally! They will grow up learning and thinking that everything they do on the Internet is being watched, they will self-censor and constantly make sure they don't "break code of conduct" even as adults. And they encourage that!</p>
+<p>
+So, to sum it up, clearly, districts (especially mine) NEED to figure out different ways of avoiding distractions in the classroom. Please, take my blog post seriously, like feedback from a fellow student. Being overruling and constantly on other people's shoulders just makes them grow up more sneaky and terrified of being punished for things that are perfectly fine to do otherwise. If you are a student of a district like this, SPEAK UP FOR YOURSELF! They won't know they're doing something WRONG until someone TELLS them they are! Get parents on board as well with the idea of having schools trust students again to use technology responsibly rather than have them be treated like prisoners even when they did nothing wrong.. Signing off now, goodnight!</p>
+
+	
+
+
+<script src="tooltip.js"></script>
+<script src="disc.js"></script>
+<script>
+    function switchPage(index, btn) {
+        const list = document.getElementById('icon-list');
+        const caret = document.getElementById('caret');
+        
+        list.className = 'icon-list animating-out';
+        
+        const offset = (index * 75) - 75; 
+        caret.style.transform = `translateX(${offset}px)`;
+
+        document.querySelectorAll('.page-link').forEach(l => l.classList.remove('active'));
+        btn.classList.add('active');
+
+        setTimeout(() => {
+            list.className = 'icon-list';
+            void list.offsetWidth; 
+            list.className = 'icon-list animating-in';
+        }, 800); // set to ig change the thing I DONT KNOW BRO THE TIEME OUT
+    }
+</script>
+
+</body>
+</html>
